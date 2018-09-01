@@ -1,0 +1,16 @@
+language: go
+
+go:
+  - 1.11.x
+
+go_import_path: github.com/mavimo/test-probot-travis
+
+script:
+  - go run main.go
+
+jobs:
+  include:
+    - stage: other
+      script:
+        - go run main.go
+      go: 1.10.x
